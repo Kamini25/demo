@@ -11,7 +11,7 @@ public class Consumer implements Runnable{
         int i;
         for(i=1;i<=5;i++){
             try{
-            Thread.sleep(10000);
+            Thread.sleep(10000); /*This sleep is added to simulate that consumer is slow and queue gets full quickly */
               int v=  q.take();
              // Thread.sleep(1000);
               System.out.println("consumed " + v);
